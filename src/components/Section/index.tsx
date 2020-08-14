@@ -9,6 +9,9 @@ interface Props {
 }
 
 const Section: React.FC<Props> = ({ variant, title, description }) => {
+  // buttonVariant = 0 or 1. Used to randomize the header button text.
+  const buttonVariant = Math.round(Math.random());
+  
   return (
     <Container className={variant}>
       <HeaderWrapper>
@@ -18,7 +21,7 @@ const Section: React.FC<Props> = ({ variant, title, description }) => {
             <span>Dropbox</span>
           </h1>
 
-          <button>Interagir</button>
+          <button>{buttonVariant === 0 ? 'Acessar' : 'Interagir' }</button>
         </Header>
       </HeaderWrapper>
       <Content>

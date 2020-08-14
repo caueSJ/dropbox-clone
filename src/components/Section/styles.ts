@@ -70,6 +70,7 @@ export const HeaderWrapper = styled.div`
     right: 0;
     left: 0;
     bottom: 0;
+    clip: rect(auto, auto, auto, auto);
 `;
 
 export const Header = styled.header`
